@@ -1,0 +1,24 @@
+package Radio;
+
+import Base.BaseTest;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import pages.Pages;
+import pages.RadioButtonPage;
+
+import java.util.HashMap;
+
+public class RadioTest extends BaseTest {
+
+
+    RadioButtonPage radioButtonPage = new RadioButtonPage(getDriver());
+
+    @Test
+    public void testWriteToFile()
+    {
+        HashMap<String, String> actualMap = radioButtonPage.getRadioValues();
+        Pages.writeFile(actualMap, "actualMap.txt");
+
+        Assertions.assertArrayEquals(Pages.readFile("expectedMap.txt"), Pages.readFile("actualMap.txt"));
+    }
+}
