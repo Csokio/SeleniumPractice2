@@ -15,6 +15,6 @@ public class BaseTest {
     @AfterAll
     public static void closeDriver()
     {
-        Pages.closeDriver();
+        Pages.driver.quit();
     }
 }
