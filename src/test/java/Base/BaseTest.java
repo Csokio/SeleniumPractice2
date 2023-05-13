@@ -7,10 +7,6 @@ import pages.Pages;
 public class BaseTest {
 
 
-    public WebDriver getDriver()
-    {
-        return Pages.driver;
-    }
 
     @AfterAll
     public static void quitDriver()

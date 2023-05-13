@@ -17,14 +17,15 @@ import java.util.*;
 
 public abstract class Pages {
 
-    public static WebDriver driver;
+    protected static WebDriver driver;
 
-    public Pages()
-    {
-        if(driver == null){
+    public Pages() {
+        if (driver == null) {
             WebDriverManager.chromedriver().setup();
+            //System.setProperty("webdriver.chrome.driver", "chromedriver");
 
             ChromeOptions options = new ChromeOptions();
+            options.setAcceptInsecureCerts(true);
             options.addArguments("ignore-certificate-errors");
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
@@ -34,9 +35,9 @@ public abstract class Pages {
             options.addArguments("--window-size=1920,1080");
             options.addArguments("start-maximized");
             options.addArguments("--remote-allow-origins=*");
-
-            Pages.driver = new ChromeDriver(options);
-            Pages.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));}
+            driver = new ChromeDriver(options);
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        }
     }
 
     public static void closeDriver()
