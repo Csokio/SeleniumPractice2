@@ -10,9 +10,9 @@ import java.util.List;
 public class TableSearchPage extends Pages {
 
 
-    public TableSearchPage(WebDriver driver)
+    public TableSearchPage()
     {
-        super(driver);
+        super();
     }
 
     private final String url = "https://demo.seleniumeasy.com/table-search-filter-demo.html";

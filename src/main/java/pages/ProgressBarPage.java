@@ -17,7 +17,7 @@ public class ProgressBarPage extends Pages{
 
     public ProgressBarPage()
     {
-        super(driver);
+        super();
     }
 
     //TODO Set Slider Value

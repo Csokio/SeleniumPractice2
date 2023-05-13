@@ -11,7 +11,7 @@ import java.util.HashMap;
 public class RadioTest extends BaseTest {
 
 
-    RadioButtonPage radioButtonPage = new RadioButtonPage(getDriver());
+    RadioButtonPage radioButtonPage = new RadioButtonPage();
 
     @Test
     public void testWriteToFile()

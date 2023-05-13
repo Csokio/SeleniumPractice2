@@ -13,8 +13,8 @@ public class BaseTest {
     }
 
     @AfterAll
-    public static void closeDriver()
+    public static void quitDriver()
     {
-        Pages.driver.quit();
+        Pages.closeDriver();
     }
 }

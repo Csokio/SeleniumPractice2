@@ -7,9 +7,9 @@ import java.util.HashMap;
 
 public class RadioButtonPage extends Pages{
 
-    public RadioButtonPage(WebDriver driver)
+    public RadioButtonPage()
     {
-        super(driver);
+        super();
     }
 
     //TODO Write Map to File

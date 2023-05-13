@@ -19,9 +19,9 @@ public abstract class Pages {
 
     public static WebDriver driver;
 
-    public Pages(WebDriver driver)
+    public Pages()
     {
-        if(Pages.driver == null){
+        if(driver == null){
             WebDriverManager.chromedriver().setup();
 
             ChromeOptions options = new ChromeOptions();
@@ -30,7 +30,7 @@ public abstract class Pages {
             options.addArguments("--disable-dev-shm-usage");
             options.addArguments("--disable-notifications");
             options.addArguments("--disable-extensions");
-            //options.addArguments("--headless");
+            options.addArguments("--headless");
             options.addArguments("--window-size=1920,1080");
             options.addArguments("start-maximized");
             options.addArguments("--remote-allow-origins=*");
@@ -39,13 +39,13 @@ public abstract class Pages {
             Pages.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));}
     }
 
-    /*public static void closeDriver()
+    public static void closeDriver()
     {
         if(driver != null){
-            driver.close();
+            driver.quit();
             driver = null;
         }
-    }*/
+    }
 
     public void executeJavaScript(String functionName)
     {

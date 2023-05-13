@@ -11,7 +11,7 @@ import java.util.Arrays;
 
 public class TableTest extends BaseTest {
 
-    TableSearchPage tableSearchPage = new TableSearchPage(getDriver());
+    TableSearchPage tableSearchPage = new TableSearchPage();
 
     @Test
     public void testCountOfRows()
