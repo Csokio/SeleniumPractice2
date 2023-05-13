@@ -19,7 +19,7 @@ public abstract class Pages {
 
     public static WebDriver driver;
 
-    protected Pages(WebDriver driver)
+    public Pages(WebDriver driver)
     {
         if(Pages.driver == null){
             WebDriverManager.chromedriver().setup();
@@ -39,13 +39,13 @@ public abstract class Pages {
             Pages.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));}
     }
 
-    public static void closeDriver()
+    /*public static void closeDriver()
     {
         if(driver != null){
             driver.close();
             driver = null;
         }
-    }
+    }*/
 
     public void executeJavaScript(String functionName)
     {
