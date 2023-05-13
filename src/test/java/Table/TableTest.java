@@ -2,9 +2,10 @@ package Table;
 
 import Base.BaseTest;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+//import org.junit.jupiter.api.Test;
 import pages.Pages;
 import pages.TableSearchPage;
+import org.testng.annotations.Test;
 
 import java.util.Arrays;
 

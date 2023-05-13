@@ -3,8 +3,11 @@ package Progress;
 import Base.BaseTest;
 import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+//import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
+
 import pages.ProgressBarPage;
+
 
 public class ProgressBarTest extends BaseTest {
     ProgressBarPage progressBarPage = new ProgressBarPage();
