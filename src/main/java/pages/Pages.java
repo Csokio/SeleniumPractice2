@@ -45,7 +45,7 @@ public abstract class Pages {
         if(driver != null){
             driver.close();
             driver = null;
-        }
+         }
     }
 
     public void executeJavaScript(String functionName)
