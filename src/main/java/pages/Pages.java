@@ -91,9 +91,24 @@ public abstract class Pages {
         try {
             File file = new File(fileName);
             FileWriter fileWriter = new FileWriter(file);
-            for (Map.Entry<String, String> entry: map.entrySet()){
+
+            List<Map.Entry<String, String>> entryList = new ArrayList<>(map.entrySet());
+            Collections.reverse(entryList);
+
+            int count = entryList.size();
+            for (Map.Entry<String, String> entry : entryList) {
                 fileWriter.write(entry.getKey() + ":" + entry.getValue());
+
+            /*for (int i = 0; i < count; i++) {
+                Map.Entry<String, String> entry = entryList.get(i);
+                fileWriter.write(entry.getKey() + ":" + entry.getValue());
+
+                // Az utolsó elem után ne szúrjon be új sort
+                if (i != count - 1) {
+                    fileWriter.write('\n');
+                }*/
             }
+
             fileWriter.close();
         } catch (Exception e) {
             System.out.println(e.getMessage());

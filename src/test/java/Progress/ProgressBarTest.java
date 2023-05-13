@@ -31,7 +31,6 @@ public class ProgressBarTest extends BaseTest {
         String actual = progressBarPage.waitDownload();
 
         Assertions.assertEquals("Complete!", actual);
-
     }
 
 }
