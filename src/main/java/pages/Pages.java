@@ -14,6 +14,7 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.time.Duration;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 public abstract class Pages {
 
@@ -36,7 +37,7 @@ public abstract class Pages {
             options.addArguments("start-maximized");
             options.addArguments("--remote-allow-origins=*");
             driver = new ChromeDriver(options);
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         }
     }
 
